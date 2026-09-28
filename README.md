@@ -1,19 +1,40 @@
-# Rank-Hive-Digital
+# Texas Auto Body (taxas-auto-body)
 
-A full-screen, dark-themed hero section for **Lithos** (geology brand) built with **React 18 + TypeScript + Vite + Tailwind CSS** and **lucide-react**.
+Official single-page website for **Texas Auto Body** — Auto Body Repair That Comes to You.
 
-### Signature Feature
-- **Cursor Spotlight Reveal**: A smooth cursor-following spotlight that reveals an underlying geological layer (`BG_IMAGE_2`) through a soft circular radial gradient mask on top of the base rock formation (`BG_IMAGE_1`).
+Mobile & Shop-Based Auto Body Repair serving Arlington, Texas and the surrounding 50-mile Dallas-Fort Worth metroplex.
 
-### Tech Stack
+## Services
+- Mobile & Shop Bumper Repair (#1 DFW Specialist)
+- Dent Repair & Damage Inspection
+- Paintless Dent Repair (PDR)
+- Insurance Collision Repair & Deductible Coupons
+- Computerized Precision Paint Matching
+- Multi-Stage Paint Correction
+
+## Features
+- Executive responsive header & multi-tier navigation
+- Driveway & workplace mobile dispatch service
+- Deductible savings coupon voucher system
+- 25+ Years of family-owned Texas craftsmanship
+- 100% Free estimates & mobile consultations
+- Open 7 days a week (7:00 AM – 5:00 PM) + 24/7 on-call availability
+
+## Tech Stack
 - **React 18**
 - **TypeScript**
 - **Vite**
 - **Tailwind CSS**
-- **Lucide React**
+- **Lucide Icons**
 
-### Getting Started
+## Getting Started
 ```bash
 npm install
 npm run dev
+```
+
+## Production Build
+```bash
+npm run build
+npm run preview
 ```
