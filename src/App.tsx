@@ -8,6 +8,7 @@ import { MobileConvenience } from './components/MobileConvenience';
 import { ExperiencePillars } from './components/ExperiencePillars';
 import { ServicesGrid } from './components/ServicesGrid';
 import { DeductibleCoupons } from './components/DeductibleCoupons';
+import { WorkGallery } from './components/WorkGallery';
 import { PhilosophyHumor } from './components/PhilosophyHumor';
 import { ServiceAreaMap } from './components/ServiceAreaMap';
 import { HowItWorks } from './components/HowItWorks';
@@ -71,7 +72,10 @@ export default function App() {
         {/* 9. Insurance Deductible Savings Vault & Coupons */}
         <DeductibleCoupons onOpenEstimate={handleOpenEstimate} />
 
-        {/* 10. Our Philosophy & The Miracles Joke */}
+        {/* 10. Flagship 20-Photo Corporate Work Gallery & Portfolio */}
+        <WorkGallery onOpenEstimate={handleOpenEstimate} />
+
+        {/* 11. Our Philosophy & The Miracles Joke */}
         <PhilosophyHumor onOpenEstimate={handleOpenEstimate} />
 
         {/* 11. Regional DFW Service Area Hub: 50-Mile Radius & 12 Listed Communities */}

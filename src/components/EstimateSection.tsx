@@ -413,6 +413,43 @@ export const EstimateSection: React.FC<EstimateSectionProps> = ({ initialService
               </p>
             </div>
 
+            {/* Showroom Finish Visual Card */}
+            <div className="card-metallic rounded-2xl overflow-hidden border border-steel-700/80 space-y-3 p-4">
+              <div className="text-xs font-black uppercase text-crimson-400 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                SHOWROOM QUALITY GUARANTEED
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="relative h-24 rounded-lg overflow-hidden border border-steel-800">
+                  <img
+                    src="/images/10_auto_paint_finished_red.jpg"
+                    alt="Finished Deep Crimson Red"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+                  <span className="absolute bottom-1 left-1.5 text-[9px] font-bold text-white uppercase bg-navy-950/80 px-1 rounded">
+                    Deep Gloss
+                  </span>
+                </div>
+                <div className="relative h-24 rounded-lg overflow-hidden border border-steel-800">
+                  <img
+                    src="/images/13_auto_paint_glossy_blue.jpg"
+                    alt="Finished Metallic Blue"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+                  <span className="absolute bottom-1 left-1.5 text-[9px] font-bold text-white uppercase bg-navy-950/80 px-1 rounded">
+                    Mirror Clear
+                  </span>
+                </div>
+              </div>
+              <p className="text-[11px] text-steel-400 text-center leading-snug">
+                Every vehicle leaves our Arlington shop with showroom depth and a lifetime craftsmanship guarantee.
+              </p>
+            </div>
+
           </div>
 
         </div>

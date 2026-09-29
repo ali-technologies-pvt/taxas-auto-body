@@ -137,6 +137,55 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEstimate }) =>
 
         </div>
 
+        {/* Real Master Tech & Shop Craftsmanship Feature */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="card-metallic rounded-3xl overflow-hidden border border-steel-750 group hover:border-crimson-500/60 transition shadow-2xl">
+            <div className="relative h-64 sm:h-72 overflow-hidden bg-navy-900">
+              <img
+                src="/images/04_dent_repair_technician.jpg"
+                alt="Texas Auto Body Certified Master Technician"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+              <div className="absolute top-4 left-4 bg-crimson-600/90 text-white text-xs font-black uppercase px-3 py-1 rounded-full border border-white/20 backdrop-blur-sm">
+                Master Craftsman
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading font-black text-xl text-white uppercase">
+                  Master Technician Hands-On Attention
+                </h4>
+                <p className="text-xs text-steel-300 mt-1">
+                  Every vehicle is inspected and repaired by master technicians with over two decades of metal shaping and structural expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-metallic rounded-3xl overflow-hidden border border-steel-750 group hover:border-crimson-500/60 transition shadow-2xl">
+            <div className="relative h-64 sm:h-72 overflow-hidden bg-navy-900">
+              <img
+                src="/images/06_auto_body_sanding.jpg"
+                alt="Precision Sanding and Surface Prep"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+              <div className="absolute top-4 left-4 bg-navy-900/90 text-steel-200 text-xs font-black uppercase px-3 py-1 rounded-full border border-steel-700 backdrop-blur-sm">
+                Arlington Shop Facility
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading font-black text-xl text-white uppercase">
+                  Precision Surface Preparation
+                </h4>
+                <p className="text-xs text-steel-300 mt-1">
+                  Meticulous multi-grit feather-sanding and primer curing ensures your new paint never peels, ripples, or loses its luster.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Corporate Metrics Banner Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="card-metallic rounded-2xl p-5 text-center">

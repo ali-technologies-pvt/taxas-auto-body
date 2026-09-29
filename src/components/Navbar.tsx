@@ -170,6 +170,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
               Why Us
             </a>
 
+            {/* Our Work Gallery */}
+            <a
+              href="#gallery"
+              className="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-navy-900 transition whitespace-nowrap"
+            >
+              Our Work
+            </a>
+
             {/* Coupons */}
             <a
               href="#coupons"
@@ -282,6 +290,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
               >
                 <span>Deductible Coupons & Savings</span>
                 <span className="text-[10px] bg-crimson-950 border border-crimson-600/40 text-crimson-300 px-2 py-0.5 rounded">Offers</span>
+              </a>
+              <a
+                href="#gallery"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2.5 rounded-lg text-steel-200 hover:text-white hover:bg-navy-900 flex items-center justify-between"
+              >
+                <span>Our Work (20-Photo Gallery)</span>
+                <span className="text-[10px] bg-steel-800 text-steel-300 px-2 py-0.5 rounded">Photos</span>
               </a>
               <a
                 href="#service-area"

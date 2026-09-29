@@ -118,6 +118,57 @@ export const MobileConvenience: React.FC<MobileConvenienceProps> = ({ onOpenEsti
 
         </div>
 
+        {/* Mobile vs Shop Real Facility Comparison */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+          {/* Mobile Dispatch Card */}
+          <div className="card-metallic rounded-3xl overflow-hidden border border-steel-750 group hover:border-crimson-500/60 transition shadow-2xl">
+            <div className="relative h-60 sm:h-64 overflow-hidden bg-navy-900">
+              <img
+                src="/images/16_auto_paint_spray_white.jpg"
+                alt="Texas Auto Body Mobile Repair Unit in Action"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+              <div className="absolute top-4 left-4 bg-crimson-600 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow">
+                Option 1: Mobile Fleet Dispatch
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading font-black text-xl text-white uppercase">
+                  Mobile Driveway & Workplace Service
+                </h4>
+                <p className="text-xs text-steel-300 mt-1">
+                  On-site bumper repair, paintless dent repair (PDR), paint touch-ups, and minor scuffs completed right outside your home or office.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Shop Facility Card */}
+          <div className="card-metallic rounded-3xl overflow-hidden border border-steel-750 group hover:border-crimson-500/60 transition shadow-2xl">
+            <div className="relative h-60 sm:h-64 overflow-hidden bg-navy-900">
+              <img
+                src="/images/07_auto_body_frame_repair.jpg"
+                alt="Arlington Texas Auto Body Shop Heavy Frame Machinery"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+              <div className="absolute top-4 left-4 bg-navy-900/90 text-steel-200 border border-steel-700 text-xs font-black uppercase px-3 py-1 rounded-full shadow backdrop-blur-sm">
+                Option 2: Arlington Shop Facility
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading font-black text-xl text-white uppercase">
+                  Heavy Structural Frame Machinery
+                </h4>
+                <p className="text-xs text-steel-300 mt-1">
+                  Chassis unibody realignment, heavy collision rebuilds, structural welding, and factory downdraft baking booths in our Arlington center.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* The Two-Way Model Banner */}
         <div className="bg-gradient-to-r from-navy-900 via-navy-850 to-navy-900 rounded-3xl p-6 sm:p-10 border border-steel-700/80 shadow-2xl relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

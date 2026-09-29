@@ -148,6 +148,88 @@ export const BumperSpotlight: React.FC<BumperSpotlightProps> = ({ onOpenEstimate
 
         </div>
 
+        {/* 4-Step Real Bumper Restoration Process Showcase */}
+        <div className="mt-14 pt-10 border-t border-steel-800/80">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <span className="text-xs font-black uppercase text-crimson-400 tracking-wider">
+              REAL REPAIR PROCESS
+            </span>
+            <h3 className="font-heading font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mt-1">
+              How We Save Your Bumper — In 4 Steps
+            </h3>
+            <p className="text-xs sm:text-sm text-steel-400 mt-1">
+              Actual photos from our mobile and Arlington shop bumper restorations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                step: '01',
+                title: 'Surface Scuff Prep',
+                desc: 'Feather-edging scratches, gouges, and parking scrapes.',
+                image: '/images/18_bumper_preparation.jpg',
+                tag: 'Prep & Sand',
+              },
+              {
+                step: '02',
+                title: 'Thermal Plastic Welding',
+                desc: 'Melting high-tensile polymer rods into tears and cracks.',
+                image: '/images/19_bumper_repair.jpg',
+                tag: 'Structural Weld',
+              },
+              {
+                step: '03',
+                title: 'Sensor & Clip Alignment',
+                desc: 'Precision fitment of parking sensors, grilles, and clips.',
+                image: '/images/17_bumper_replacement.jpg',
+                tag: 'OEM Fitment',
+              },
+              {
+                step: '04',
+                title: 'Showroom Finish',
+                desc: 'Seamless paint match and high-gloss clear coat baked to perfection.',
+                image: '/images/20_bumper_finished_blue.jpg',
+                tag: 'Completed',
+              },
+            ].map((process, pIdx) => (
+              <div
+                key={pIdx}
+                className="card-metallic rounded-2xl overflow-hidden border border-steel-800 hover:border-crimson-500/60 transition group shadow-lg"
+              >
+                <div className="relative h-44 overflow-hidden bg-navy-900">
+                  <img
+                    src={process.image}
+                    alt={process.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter brightness-90 group-hover:brightness-100"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-black/30" />
+                  
+                  {/* Step Badge */}
+                  <div className="absolute top-3 left-3 bg-crimson-600 text-white font-mono font-black text-xs px-2.5 py-1 rounded-md shadow">
+                    STEP {process.step}
+                  </div>
+
+                  {/* Tag */}
+                  <div className="absolute top-3 right-3 bg-navy-950/80 backdrop-blur-sm text-steel-200 text-[10px] font-bold uppercase px-2 py-0.5 rounded border border-steel-700/80">
+                    {process.tag}
+                  </div>
+                </div>
+
+                <div className="p-4">
+                  <h4 className="font-heading font-black text-base text-white group-hover:text-crimson-400 transition-colors">
+                    {process.title}
+                  </h4>
+                  <p className="text-xs text-steel-400 mt-1 leading-relaxed">
+                    {process.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

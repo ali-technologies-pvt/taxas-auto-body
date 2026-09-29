@@ -15,6 +15,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
       badge: 'SMALL DENT? BIG PROBLEM?',
       headline: 'Not Necessarily.',
       subhead: 'Straightforward damage evaluation with zero pressure.',
+      image: '/images/01_dent_repair_detail.jpg',
       description:
         'That parking lot dent may be repairable. That door ding may be repairable. That bumper damage may be repairable. Our team will inspect the damage and help you understand your best, most affordable options. No guessing. No pressure. Just a straightforward repair estimate.',
       bullets: [
@@ -32,6 +33,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
       badge: 'PAINTLESS DENT REPAIR (PDR)',
       headline: 'Keep Your Original Paint When Possible.',
       subhead: 'Preserve the Paint. Restore the Shape.',
+      image: '/images/02_dent_repair_panel.jpg',
       description:
         'Paintless Dent Repair, or PDR, can repair certain dents without repainting the damaged panel. By utilizing specialized metal manipulation tools, we push dents out from the backside, keeping your factory finish 100% intact.',
       bullets: [
@@ -49,6 +51,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
       badge: 'INSURANCE COLLISION REPAIR',
       headline: 'Had an Accident? Let Us Help You Get Back on the Road.',
       subhead: 'Accidents are stressful enough. Your repair shouldn’t add more stress.',
+      image: '/images/05_auto_body_collision_repair.jpg',
       description:
         'Texas Auto Body provides professional insurance collision repair for qualifying vehicle damage. We will evaluate the damage, explain all repair options, and help guide you through the next steps smoothly.',
       bullets: [
@@ -66,6 +69,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
       badge: 'PRECISION PAINT MATCHING',
       headline: "A Repair Shouldn't Look Like a Repair.",
       subhead: 'Better Match. Better Finish. Better Look.',
+      image: '/images/09_auto_paint_spray_red.jpg',
       description:
         'Getting the shape right is only part of the job — the finish matters just as much. Our computerized paint-matching service is designed to help repaired areas blend seamlessly with the surrounding factory finish.',
       bullets: [
@@ -83,6 +87,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
       badge: 'PAINT CORRECTION',
       headline: 'Bring Back the Shine.',
       subhead: 'Make Your Car Look Better Again.',
+      image: '/images/14_auto_body_polishing.jpg',
       description:
         'Swirls. Oxidation. Water spots. Light surface imperfections. Your vehicle’s paint takes a beating from the harsh Texas sun and road debris. Our multi-stage paint correction restores depth, clarity, and gloss to qualifying finishes.',
       bullets: [
@@ -147,31 +152,44 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
             return (
               <div
                 key={service.id}
-                className="card-metallic rounded-3xl p-7 sm:p-9 flex flex-col justify-between border-steel-700/80 hover:border-crimson-500/60 transition-all duration-300 group"
+                className="card-metallic rounded-3xl overflow-hidden flex flex-col justify-between border-steel-700/80 hover:border-crimson-500/60 transition-all duration-300 group shadow-xl"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-3 mb-4">
-                    <span className="text-xs font-black uppercase text-crimson-400 bg-crimson-950/90 px-3 py-1 rounded-full border border-crimson-700/40">
-                      {service.badge}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-navy-900 border border-steel-700 flex items-center justify-center text-crimson-500 group-hover:text-white group-hover:bg-crimson-600 transition shadow">
-                      <Icon className="w-5 h-5" />
+                  {/* Service Photo Banner */}
+                  <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-navy-900">
+                    <img
+                      src={service.image}
+                      alt={service.headline}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+                    
+                    {/* Badge & Icon on Photo */}
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-3">
+                      <span className="text-[11px] font-black uppercase text-white bg-crimson-600/90 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20 shadow">
+                        {service.badge}
+                      </span>
+                      <div className="w-10 h-10 rounded-xl bg-navy-950/80 backdrop-blur-sm border border-steel-700 flex items-center justify-center text-crimson-400 group-hover:text-white group-hover:bg-crimson-600 transition shadow">
+                        <Icon className="w-5 h-5" />
+                      </div>
                     </div>
                   </div>
 
-                  <h3 className="font-heading font-black text-2xl sm:text-3xl text-white mb-2 leading-tight">
-                    {service.headline}
-                  </h3>
+                  <div className="p-7 sm:p-8 pb-4">
+                    <h3 className="font-heading font-black text-2xl sm:text-3xl text-white mb-2 leading-tight">
+                      {service.headline}
+                    </h3>
 
-                  <p className="text-sm font-semibold text-crimson-400 mb-4">
-                    {service.subhead}
-                  </p>
+                    <p className="text-sm font-semibold text-crimson-400 mb-4">
+                      {service.subhead}
+                    </p>
 
-                  <p className="text-sm text-steel-300 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
+                    <p className="text-sm text-steel-300 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
 
-                  <div className="space-y-2 mb-6 pt-2 border-t border-steel-800/80">
+                    <div className="space-y-2 mb-6 pt-2 border-t border-steel-800/80">
                     {service.bullets.map((b, idx) => (
                       <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-steel-300">
                         <Check className="w-4 h-4 text-crimson-500 shrink-0" />
@@ -180,8 +198,9 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimate }) =>
                     ))}
                   </div>
                 </div>
+              </div>
 
-                <div className="pt-4 border-t border-steel-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="p-7 sm:p-8 pt-0 border-t border-steel-800 flex flex-col sm:flex-row items-center justify-between gap-3">
                   <button
                     onClick={() => onOpenEstimate(service.badge)}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-crimson-600 hover:bg-crimson-500 text-white font-extrabold text-xs uppercase px-5 py-3 rounded-xl tracking-wider transition shadow-md"

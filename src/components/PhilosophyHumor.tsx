@@ -92,6 +92,20 @@ export const PhilosophyHumor: React.FC<PhilosophyHumorProps> = ({ onOpenEstimate
                   "We can't do miracles. We tried, it didn't work. :)"
                 </p>
 
+                {/* Real Welding Photo */}
+                <div className="relative h-44 rounded-xl overflow-hidden border border-steel-800 my-2">
+                  <img
+                    src="/images/08_auto_body_welding.jpg"
+                    alt="Master Welder at Texas Auto Body"
+                    className="w-full h-full object-cover filter brightness-90"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-3 right-3 text-[11px] text-steel-300 font-medium">
+                    Honest craftsmanship, structural steel welding, and real sweat.
+                  </div>
+                </div>
+
                 <p className="text-steel-300 text-xs sm:text-sm leading-relaxed border-t border-steel-800 pt-3">
                   But we can promise to show up on time, do the work right the first time, and give your vehicle our absolute best craftsmanship.
                 </p>

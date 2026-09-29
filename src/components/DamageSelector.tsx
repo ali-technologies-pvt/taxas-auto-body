@@ -13,6 +13,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
       description: 'Side swipes, door dings, and crease dents fixed seamlessly with PDR or precision repair.',
       icon: Car,
       tag: 'Mobile or Shop',
+      image: '/images/01_dent_repair_detail.jpg',
     },
     {
       id: 'cracked-bumper',
@@ -20,6 +21,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
       description: 'Scuffs, cracks, dents, and plastic tears restored. Don’t pay for an expensive replacement yet!',
       icon: ShieldAlert,
       tag: 'Bumper Specialists',
+      image: '/images/19_bumper_repair.jpg',
     },
     {
       id: 'parking-lot-ding',
@@ -27,6 +29,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
       description: 'Small shopping cart or car door impacts quickly smoothed out without ruining factory paint.',
       icon: AlertOctagon,
       tag: 'Fast PDR',
+      image: '/images/02_dent_repair_panel.jpg',
     },
     {
       id: 'collision-damage',
@@ -34,6 +37,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
       description: 'Accident repairs, structural panel alignment, and stress-free insurance claim guidance.',
       icon: Disc,
       tag: 'Insurance Assistance',
+      image: '/images/05_auto_body_collision_repair.jpg',
     },
     {
       id: 'paint-mismatch',
@@ -41,6 +45,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
       description: 'Factory-grade paint matching, blending, and paint correction to erase swirl marks and flaws.',
       icon: Paintbrush,
       tag: 'Computerized Match',
+      image: '/images/11_auto_paint_color_matching.jpg',
     },
   ];
 
@@ -62,7 +67,7 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
           </p>
         </div>
 
-        {/* 5 Common Damage Cards */}
+        {/* 5 Common Damage Cards with Real Repair Photos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {commonDamages.map((item) => {
             const Icon = item.icon;
@@ -70,29 +75,45 @@ export const DamageSelector: React.FC<DamageSelectorProps> = ({ onSelectDamage }
               <div
                 key={item.id}
                 onClick={() => onSelectDamage(item.title)}
-                className="group relative cursor-pointer card-metallic rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1.5"
+                className="group relative cursor-pointer card-metallic rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1.5 border border-steel-800 hover:border-crimson-500/60 shadow-xl"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-navy-900 border border-steel-700/80 flex items-center justify-center text-crimson-500 group-hover:text-white group-hover:bg-crimson-600 transition-colors shadow-inner">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-steel-800/80 text-steel-300 group-hover:text-white transition">
+                {/* Photo Thumbnail */}
+                <div className="relative h-36 w-full overflow-hidden bg-navy-900">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter brightness-90 group-hover:brightness-100"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-black/40" />
+                  
+                  {/* Floating Tag */}
+                  <div className="absolute top-2.5 right-2.5">
+                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-navy-950/90 text-steel-200 border border-steel-700/80 backdrop-blur-sm">
                       {item.tag}
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-extrabold text-lg text-white group-hover:text-crimson-400 transition-colors mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-steel-400 leading-relaxed">
-                    {item.description}
-                  </p>
+                  {/* Icon Badge */}
+                  <div className="absolute -bottom-3 left-4 w-9 h-9 rounded-lg bg-navy-900 border border-crimson-500/60 flex items-center justify-center text-crimson-400 group-hover:text-white group-hover:bg-crimson-600 transition-colors shadow-lg z-10">
+                    <Icon className="w-4 h-4" />
+                  </div>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-steel-800/60 flex items-center justify-between text-xs font-bold text-steel-300 group-hover:text-crimson-400">
-                  <span>Get Estimate</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                <div className="p-4 pt-5 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-heading font-extrabold text-base text-white group-hover:text-crimson-400 transition-colors mb-1.5">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-steel-400 leading-relaxed line-clamp-3">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-steel-800/60 flex items-center justify-between text-xs font-bold text-steel-300 group-hover:text-crimson-400">
+                    <span>Get Estimate</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </div>
             );
